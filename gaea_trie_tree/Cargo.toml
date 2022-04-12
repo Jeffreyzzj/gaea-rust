@@ -6,3 +6,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+log = "0.4.16"
+log4rs = "1.0.0"
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+
+[dependencies.lazy_static]
+git = "https://github.com/Kimundi/lazy-static.rs"
