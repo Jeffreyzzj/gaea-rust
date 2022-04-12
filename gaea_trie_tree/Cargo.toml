@@ -1,5 +1,5 @@
 [package]
-name = "gaea-trie-tree"
+name = "gaea_trie_tree"
 version = "0.1.0"
 edition = "2021"
 
