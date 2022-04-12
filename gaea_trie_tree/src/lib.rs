@@ -41,6 +41,6 @@ pub fn read_conf() {
 }
 
 pub fn write_str(path: String) {
-    let mut new_settings = config_tree.write().unwrap();
-    *new_settings = ConfigTree::new(path);
+    let mut new_config_tree = config_tree.write().unwrap();
+    *new_config_tree = ConfigTree::new(path);
 }
