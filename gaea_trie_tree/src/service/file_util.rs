@@ -2,6 +2,8 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, Result};
 use std::collections::HashMap;
 
+use log::{info};
+
 pub struct FileUtil {}
 
 impl FileUtil {
@@ -16,7 +18,8 @@ impl FileUtil {
                 HashMap::new()
             }
         };
-        
+        info!("init_id_char_map over");
+        println!("init_id_char_map over");
         return id_char_map;
     }
 
@@ -55,6 +58,8 @@ impl FileUtil {
             }
         };
         
+        info!("init_char_id_map over");
+        println!("init_char_id_map over");
         return char_id_map;
     }
 
