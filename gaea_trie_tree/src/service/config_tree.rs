@@ -12,7 +12,4 @@ impl ConfigTree {
             path: file_path,
         }
     }
-    pub fn init_config_tree(&self) {
-        println!("aaa bbb ccc hahaha");
-    }
 }
