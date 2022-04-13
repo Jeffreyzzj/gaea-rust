@@ -6,7 +6,7 @@ use std::collections::HashMap;
 mod service;
 use service::tree::trie_tree::{GaeaTrieTree};
 use service::config_tree::{ConfigTree};
-use service::file_uitl::{FileUtil};
+use service::file_util::{FileUtil};
 
 // #[cfg(test)]
 // mod tests {
@@ -27,9 +27,9 @@ lazy_static! {
 
 pub fn init_config(path: String) {
     // 重写路径
-    ConfigTree::re_write_config_path(path);
+    //ConfigTree::re_write_config_path(path);
     // 读取数据
-    ConfigTree::get_tree_conf();
+    //ConfigTree::get_tree_conf();
 }
 
 // pub fn get_tree_conf() {
