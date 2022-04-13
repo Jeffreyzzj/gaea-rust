@@ -1,10 +1,12 @@
 #[macro_use(lazy_static)]
 extern crate lazy_static;
 use std::sync::RwLock;
+use std::collections::HashMap;
 
 mod service;
 use service::tree::trie_tree::{GaeaTrieTree};
 use service::config_tree::{ConfigTree};
+use service::file_uitl::{FileUtil};
 
 // #[cfg(test)]
 // mod tests {
@@ -15,14 +17,12 @@ use service::config_tree::{ConfigTree};
 //     }
 // }
 
-// pub fn CreateTrieTree() -> GaeaTrieTree {
-//     let trie_tree_p = GaeaTrieTree::new();
-//     return trie_tree_p;
-// }
-
 lazy_static! {
-    //static ref config_tree: ConfigTree = ConfigTree::new(test_get_str());
     static ref config_tree: RwLock<ConfigTree> = RwLock::new(ConfigTree::new(test_get_str()));
+
+    static ref id_char_map: HashMap<i32, String> = FileUtil::init_id_char_map();
+
+    static ref char_id_map: HashMap<String, i32> = FileUtil::init_char_id_map();
 }
 
 pub fn test_get_str() -> String {   
@@ -32,7 +32,7 @@ pub fn test_get_str() -> String {
 pub fn init_config(path: String) {
     
     write_str(path);
-    read_conf();
+    //read_conf();
 }
 
 pub fn read_conf() {
