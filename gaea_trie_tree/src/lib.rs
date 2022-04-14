@@ -3,9 +3,9 @@ extern crate lazy_static;
 use std::collections::HashMap;
 
 mod service;
-use service::tree::trie_tree::{GaeaTrieTree};
-use service::config_tree::{ConfigTree};
-use service::character::character_util::{CharacterUtil};
+//use service::tree::trie_tree::{GaeaTrieTree};
+//use service::config_tree::{ConfigTree};
+//use service::character::character_util::{CharacterUtil};
 
 // #[cfg(test)]
 // mod tests {
@@ -17,9 +17,10 @@ use service::character::character_util::{CharacterUtil};
 // }
 
 pub fn init_config(path: String) {
-    // 重写路径
-    //ConfigTree::re_write_config_path(path);
-    // 读取数据
-    //ConfigTree::get_tree_conf();
-    CharacterUtil::get_id_char_map(&1);
+    // let ch_str = String::from("吃");
+    // let res = CharacterUtil::get_char_id_map(&ch_str);
+    // match res {
+    //     Some(c) => println!("value {}", c),
+    //     _ => println!("is null")
+    // }
 }
