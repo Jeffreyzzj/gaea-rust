@@ -13,14 +13,11 @@ pub struct CharacterUtil {
 }
 
 impl CharacterUtil {
-    pub fn get_id_char_map(id: &i32) {
-        println!("get_id_char_map ok ");
-        // if let Some(value) = ID_CHAR_MAP.get(id) {
-        //     //println!("value: {}", value);
-        //     return value
-        // }
-        // return None;
-        //println!("value over");
-        //return ID_CHAR_MAP.get(id);
+    pub fn get_id_char_map(id: &i32) -> Option<&String> {
+        return ID_CHAR_MAP.get(id);
+    }
+
+    pub fn get_char_id_map(ch: &String) -> Option<&i32> {
+        return CHAR_ID_MAP.get(ch);
     }
 }
