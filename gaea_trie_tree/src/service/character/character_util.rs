@@ -20,4 +20,21 @@ impl CharacterUtil {
     pub fn get_char_id_map(ch: &String) -> Option<&i32> {
         return CHAR_ID_MAP.get(ch);
     }
+
+    // 将query转化为ID列表
+    pub fn query_to_id_list(query: String) -> Vec<i32> {
+        let mut id_list: Vec<i32> = Vec::new();
+
+        for c in query.chars() {
+            let c_str = c.to_string();
+            let id_infos = CharacterUtil::get_char_id_map(&c_str);
+            if let Some(id) = id_infos {
+                //let v = *id;
+                id_list.push(*id);
+            }   
+        }
+        print!("id_list value : {:?}", id_list);
+
+        return id_list;
+    }
 }

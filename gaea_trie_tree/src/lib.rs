@@ -5,7 +5,7 @@ use std::collections::HashMap;
 mod service;
 //use service::tree::trie_tree::{GaeaTrieTree};
 //use service::config_tree::{ConfigTree};
-//use service::character::character_util::{CharacterUtil};
+use service::character::character_util::{CharacterUtil};
 
 // #[cfg(test)]
 // mod tests {
@@ -17,6 +17,7 @@ mod service;
 // }
 
 pub fn init_config(path: String) {
+    CharacterUtil::query_to_id_list("你好呀, rust".to_string());
     // let ch_str = String::from("吃");
     // let res = CharacterUtil::get_char_id_map(&ch_str);
     // match res {
