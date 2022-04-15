@@ -7,6 +7,7 @@ use log::{info};
 pub struct FileUtil {}
 
 impl FileUtil {
+    // 初始化 ID - char map
     pub fn init_id_char_map() -> HashMap<i32, String> {
         let id_char_res = FileUtil::read_id_char_file();
         let id_char_map: HashMap<i32, String> = match id_char_res {
@@ -18,13 +19,12 @@ impl FileUtil {
                 HashMap::new()
             }
         };
-        info!("init_id_char_map over");
-        println!("init_id_char_map over");
         return id_char_map;
     }
 
     pub fn read_id_char_file() -> Result<HashMap<i32, String>> {
-        let file = File::open("/home/work/code/gaea-rust/gaea_trie_tree/resources/id_char.txt")?;
+        //let file = File::open("/home/work/code/gaea-rust/gaea_trie_tree/resources/id_char.txt")?;
+        let file = File::open("/Users/zengzijie/zzj/code/rust_code/gaea-rust/gaea_trie_tree/resources/id_char.txt")?;
         let mut id_char_map: HashMap<i32, String> = HashMap::new();
         for line in BufReader::new(file).lines() {
 
@@ -46,6 +46,7 @@ impl FileUtil {
         Ok(id_char_map)
     }
 
+    // 初始化 char - ID map
     pub fn init_char_id_map() -> HashMap<String, i32> {
         let char_id_res = FileUtil::read_char_id_file();
         let char_id_map: HashMap<String, i32> = match char_id_res {
@@ -53,18 +54,16 @@ impl FileUtil {
                 char_id_map_res
             }, 
             Err(e) => {
-                panic!("Error");
+                panic!("Error: {}", e);
                 HashMap::new()
             }
         };
-        
-        info!("init_char_id_map over");
-        println!("init_char_id_map over");
         return char_id_map;
     }
 
     pub fn read_char_id_file() -> Result<HashMap<String, i32>> {
-        let file = File::open("/home/work/code/gaea-rust/gaea_trie_tree/resources/char_id.txt")?;
+        //let file = File::open("/home/work/code/gaea-rust/gaea_trie_tree/resources/char_id.txt")?;
+        let file = File::open("/Users/zengzijie/zzj/code/rust_code/gaea-rust/gaea_trie_tree/resources/id_char.txt")?;
         let mut char_id_map: HashMap<String, i32> = HashMap::new();
         for line in BufReader::new(file).lines() {
 
