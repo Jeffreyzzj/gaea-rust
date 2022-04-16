@@ -63,7 +63,7 @@ impl FileUtil {
 
     pub fn read_char_id_file() -> Result<HashMap<String, i32>> {
         //let file = File::open("/home/work/code/gaea-rust/gaea_trie_tree/resources/char_id.txt")?;
-        let file = File::open("/Users/zengzijie/zzj/code/rust_code/gaea-rust/gaea_trie_tree/resources/id_char.txt")?;
+        let file = File::open("/Users/zengzijie/zzj/code/rust_code/gaea-rust/gaea_trie_tree/resources/char_id.txt")?;
         let mut char_id_map: HashMap<String, i32> = HashMap::new();
         for line in BufReader::new(file).lines() {
 

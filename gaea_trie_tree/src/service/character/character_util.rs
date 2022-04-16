@@ -33,7 +33,6 @@ impl CharacterUtil {
                 id_list.push(*id);
             }   
         }
-        print!("id_list value : {:?}", id_list);
 
         return id_list;
     }
